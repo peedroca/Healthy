@@ -1,21 +1,21 @@
-﻿using Healthy.BaseComponents.Pages;
-using Healthy.IMC.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Healthy.IMC.Views
+namespace Healthy.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class IMCMainPage : BaseContentPage
+    public partial class MenuMaster : ContentPage
     {
-        public IMCMainPage()
-            : base(typeof(IMCMainViewModel))
+        public MenuMaster()
         {
             InitializeComponent();
         }

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:page="clr-namespace:Healthy.BaseComponents.Pages;assembly=Healthy.BaseComponents"
              Title="{Binding Title}"
-             x:Class="Healthy.IMC.Views.IMCMainPage">
+             x:Class="Healthy.News.Views.NewsMainPage">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"

@@ -1,9 +1,8 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using Xamarin.Forms.Xaml;
+using Healthy.ApplicationObjects;
 
 namespace Healthy.Mobile
 {
@@ -12,8 +11,9 @@ namespace Healthy.Mobile
         public App()
         {
             InitializeComponent();
+            AppContainer.Container = new Setup().CreateContainer();
 
-            MainPage = new Menu();
+            MainPage = new Views.Menu();
         }
 
         protected override void OnStart()

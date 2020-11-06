@@ -1,5 +1,5 @@
 ﻿using Healthy.BaseComponents.Pages;
-using Healthy.IMC.ViewModels;
+using Healthy.News.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Healthy.IMC.Views
+namespace Healthy.News.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class IMCMainPage : BaseContentPage
+    public partial class NewsMainPage : BaseContentPage
     {
-        public IMCMainPage()
-            : base(typeof(IMCMainViewModel))
+        public NewsMainPage()
+            : base(typeof(NewsMainViewModel))
         {
             InitializeComponent();
         }

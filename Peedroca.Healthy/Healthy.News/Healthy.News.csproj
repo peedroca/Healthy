@@ -5,13 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <PackageReference Include="Autofac" Version="6.0.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.3" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.3" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.3" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,9 +22,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\IMCMainPage.xaml">
+    <EmbeddedResource Update="Views\NewsMainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Views\NewsMainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 
 </Project>

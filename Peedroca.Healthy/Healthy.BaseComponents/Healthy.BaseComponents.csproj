@@ -7,7 +7,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.3" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.3" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Healthy.ApplicationObjects\Healthy.ApplicationObjects.csproj" />
   </ItemGroup>
 
 </Project>
