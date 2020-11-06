@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{22411DAD-9B2F-48C7-AFD3-440FA4101260}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healthy.Mobile.Android", "Healthy.Mobile\Healthy.Mobile.Android\Healthy.Mobile.Android.csproj", "{7021DC52-2EDA-4E48-A9E9-31FF825ACC3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healthy.Mobile", "Healthy.Mobile\Healthy.Mobile\Healthy.Mobile.csproj", "{AFC95489-5650-4D2F-B512-D31139409B99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{36BF38CE-4F42-45A4-9E5D-49FA2800CCD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healthy.BaseComponents", "Healthy.BaseComponents\Healthy.BaseComponents.csproj", "{DC2D6B5F-D043-4DDB-BA1A-3E636E1356D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healthy.IMC", "Healthy.IMC\Healthy.IMC.csproj", "{01E97DC1-F91C-4666-A478-DE9A22495FAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7021DC52-2EDA-4E48-A9E9-31FF825ACC3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7021DC52-2EDA-4E48-A9E9-31FF825ACC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7021DC52-2EDA-4E48-A9E9-31FF825ACC3F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7021DC52-2EDA-4E48-A9E9-31FF825ACC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7021DC52-2EDA-4E48-A9E9-31FF825ACC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7021DC52-2EDA-4E48-A9E9-31FF825ACC3F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AFC95489-5650-4D2F-B512-D31139409B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC95489-5650-4D2F-B512-D31139409B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC95489-5650-4D2F-B512-D31139409B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC95489-5650-4D2F-B512-D31139409B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC2D6B5F-D043-4DDB-BA1A-3E636E1356D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2D6B5F-D043-4DDB-BA1A-3E636E1356D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2D6B5F-D043-4DDB-BA1A-3E636E1356D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2D6B5F-D043-4DDB-BA1A-3E636E1356D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01E97DC1-F91C-4666-A478-DE9A22495FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E97DC1-F91C-4666-A478-DE9A22495FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E97DC1-F91C-4666-A478-DE9A22495FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E97DC1-F91C-4666-A478-DE9A22495FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC2D6B5F-D043-4DDB-BA1A-3E636E1356D4} = {36BF38CE-4F42-45A4-9E5D-49FA2800CCD5}
+		{01E97DC1-F91C-4666-A478-DE9A22495FAA} = {22411DAD-9B2F-48C7-AFD3-440FA4101260}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F56B226-D1EC-47B3-84AA-8137BBC2A0E8}
+	EndGlobalSection
+EndGlobal
