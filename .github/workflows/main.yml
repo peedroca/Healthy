@@ -9,11 +9,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.5
+      
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
       
       - name: Setup Android SDK Tools
         uses: android-actions/setup-android@v2.0.1
+      
+      - name: Restore NuGet
+        run: nuget restore Peedroca.Healthy\Peedroca.Healthy.sln
       
       - name: Build the project
         run: msbuild Peedroca.Healthy\Peedroca.Healthy.sln /p:Configuration=Release;Platform="Any CPU" /t:Peedroca.Healthy
