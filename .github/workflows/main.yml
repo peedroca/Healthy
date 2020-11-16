@@ -1,24 +1,25 @@
 on: push
 name: Build and Generate Android Apk
-env:
-  SOLUTION_NAME: ${{secrets.SOLUTION_NAME}}
-  ANDROID_PROJECT_NAME: ${{secrets.ANDROID_PROJECT_NAME}}
 jobs:
   build:
     name: Build APK
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@master
-      - name: Building APK
-        uses: ./action
-        with:
-          args: /r:True /t:SignAndroidPackage /p:AndroidSdkDirectory=/android/sdk ${{env.SOLUTION_NAME}}/${{env.ANDROID_PROJECT_NAME}}/${{env.ANDROID_PROJECT_NAME}}.csproj
-      - name: Artifacts
-        run: |
-          mkdir -p apks
-          cp ${{env.SOLUTION_NAME}}/${{env.ANDROID_PROJECT_NAME}}/bin/Debug/*.apk apks
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: apks
-          path: apks
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+      
+      - name: Setup Android SDK Tools
+        uses: android-actions/setup-android@v2.0.1
+      
+      - name: Build the project
+        run: msbuild Peedroca.Healthy\Peedroca.Healthy.sln /p:Configuration=Release;Platform="Any CPU" /t:Peedroca.Healthy
+      
+      - name: Sign the .apk file
+        run: msbuild Peedroca.Healthy\Healthy.Mobile\Healthy.Mobile\Healthy.Mobile.csproj /p:Configuration=Release;Platform="Any CPU" /t:SignAndroidPackage
+      
+      - name: Zip-align and deploy the signed .apk file
+        run: zipalign -f -v 4 "**/*.apk" "Demo.apk"
